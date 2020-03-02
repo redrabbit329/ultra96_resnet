@@ -1,7 +1,21 @@
 # ultra96_resnet
 Ultra96 v2 Board Resnet50 Example Analysis
 
-
+CC=<컴파일러>
+CFLAGS=<컴파일 옵션>
+LDFLAGS=<링크 옵션>
+LDLIBS=<링크 라이브러리 목록>
+OBJS=<Object 파일 목록>
+TARGET=<빌드 대상 이름>
+ 
+all: $(TARGET)
+ 
+clean:
+    rm -f *.o
+    rm -f $(TARGET)
+ 
+$(TARGET): $(OBJS)
+$(CC) -o $@ $(OBJS)
 
   PROJECT = resnet50
   SYSROOT = ${SDKTARGETSYSROOT}
